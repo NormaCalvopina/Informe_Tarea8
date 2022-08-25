@@ -9,7 +9,23 @@ Resolución de ejercicios Capítulo 15 y 16 del Libro de Floyd (Octava edición)
 
 #### Objetivos generales
 
+Conocer y estudiar los conceptos de Circuitos RC y Circuitos RL por medio de la implementación de mapas conceptuales para mejorar el entendimiento, para luego desarrollar correctamente los ejercicios de cada tema.
+
 #### Objetivos especificos
+
+- Aprender a manejar los números complejos para aplicarlos en Circuitos RC
+
+- Determinar la impedancia de un circuito RC en serie y analizar un circuito RC en serie 
+
+- Analizar algunas aplicaciones básicas de RC
+
+- Reconocer fallas en circuitos RC
+
+-  Describir la relación entre corriente y voltaje en un circuito RL en serie
+
+-  Determinar impedancia y admitancia en un circuito RL en paralelo
+
+-  Reconocer fallas en circuitos RL
 
 ### 2. MARCO TEORICO
 
@@ -87,17 +103,70 @@ Un oscilador es un circuito que genera una forma de onda periódica, y resulta m
 
 ## Circuitos RL (Capitulo 16)
 
+![image](https://user-images.githubusercontent.com/105259381/186585219-d688531a-9700-4aed-bd0c-f05ac093aef2.png)
 
+Este circuito RL es muy común. Aparece siempre que hay un alambre enrollado en un circuito, como cuando obligas a un relé mecánico a provocar un movimiento físico (un relé contiene una bobina que se utiliza como electroimán). Encontramos inductores en casi todas las fuentes de poder y en muchos filtros. Todos los cables y los trazados de las tarjetas de circuitos tienen una pequeña autoinductancia, que puede ser importante en circuitos muy veloces.
 
+Para un circuito resistor-inductor, si el inductor tiene una corriente inicial, Io esta disminuirá exponencialmente de acuerdo a la ecuación:
 
+![image](https://user-images.githubusercontent.com/105259381/186585432-a52cebcd-fa08-4a23-9d27-136f1a437518.png)
 
+Donde Io es la corriente al tiempo t=0. A esta la llamamos respuesta natural del circuito.
 
+La constante de tiempo para un circuito RL es 
 
+![image](https://user-images.githubusercontent.com/105259381/186585638-74bc5f4c-b0c2-4392-8edc-3027f340def2.png)
 
+La respuesta natural de un circuito es lo que hace el circuito cuando no está bajo influencias externas (no entra energía). Es el comportamiento más básico del circuito. Cuando lo colocamos en un circuito más grande, la respuesta natural juega un papel fundamental en el comportamiento general.
 
+Estos elementos son de tamaño pequeño para valores de componentes mayormente altos. Se puede formar un filtro unipolar utilizando los circuitos RL y RC. Cuando los elementos reactivos como el condensador o el inductor están conectados en serie/paralelo con la carga, se indicará si el filtro es de paso alto o de paso bajo.
 
+Considere el siguiente circuito RL que incluye un resistor y un inductor usando una fuente de voltaje. Creemos que el flujo de corriente dentro del circuito es I (amperio) y a través de la resistencia es IR y el inductor es IL correspondientemente.
 
+![image](https://user-images.githubusercontent.com/105259381/186585869-796ebad7-edb5-40b9-9057-07cd63c616ba.png)
 
+Dado que tanto los componentes como R & L están conectados en serie, entonces el flujo de corriente dentro de ambos componentes y el circuito completo será el mismo como IR = IL = I. La caída de voltaje a través de la resistencia y el inductor son VR y VI
+
+#### Diagrama Fasorial
+
+![image](https://user-images.githubusercontent.com/105259381/186586049-10e967b2-cdfc-49fb-bfb8-30a38936e75b.png)
+
+Aquí, la corriente (I) se puede tomar como referencia.
+
+El VR que se conoce como la caída de voltaje a través de la resistencia = IR se puede dibujar dentro de la fase a través de la corriente (I).
+
+A través de la reactancia inductiva, la caída de voltaje es VL = IXL se puede dibujar por delante del flujo de corriente porque el flujo de corriente retrasa el voltaje a través de 90 grados dentro del circuito inductivo.
+Las caídas de la suma vectorial de dos voltajes son VR y VL, que son equivalentes al voltaje V dado.
+
+Entonces,
+
+En el triángulo anterior como OAB
+
+![image](https://user-images.githubusercontent.com/105259381/186586263-179dc9e9-1e1f-4ae7-b9d0-6e24a7dfe521.png)
+
+Aquí, «Z» es toda la resistencia que se ofrece al flujo de CA a través de un circuito RL en serie. Entonces se conoce como la impedancia del circuito RL y se mide en ohmios (Ω).
+
+#### Circuito RL Paralelo
+
+Cuando tanto el resistor como el inductor están conectados en paralelo entre sí y se alimentan a través de una fuente de voltaje, se conoce como circuito RL paralelo. Los voltajes de entrada y salida del circuito son Ve y Vs. Una vez que el resistor y el inductor están conectados en paralelo, Ve es equivalente a Vs. Sin embargo, el flujo de corriente dentro de estos componentes no es el mismo.
+
+![image](https://user-images.githubusercontent.com/105259381/186586522-70a138a7-3db9-412d-b565-2f1cf970bd86.png)
+
+En un circuito RC en paralelo, la relación principal entre el voltaje y las corrientes se puede ilustrar mediante el diagrama vectorial (fasor).
+
+El vector de referencia «E» significa el voltaje dentro del circuito paralelo RL.
+
+Como el flujo de corriente a través de la resistencia está dentro de la fase por el voltaje a través de él, entonces se muestra IR en el vector de voltaje.
+
+El «IL» retrasa el voltaje en un ángulo de 90 grados y se puede colocar dentro de una dirección hacia abajo para retrasar el vector de voltaje en un ángulo de 90 grados.
+
+Aquí, tanto la suma de vectores como IR e IL proporcionan un resultado que significa la suma (IT) de lo contrario, la corriente de línea
+
+El ángulo «θ» denota la fase entre la corriente y el voltaje de línea dados.
+
+El diagrama fasorial del circuito RL paralelo se muestra a continuación.
+
+![image](https://user-images.githubusercontent.com/105259381/186586633-b653e076-715e-4f25-bd9a-1379b9adff13.png)
 
 
 ### 3. EXPLICACIÓN O RESOLUCIÓN DE EJERCICIOS O PROBLEMAS
@@ -518,9 +587,80 @@ Para el literal b
 
 ![image](https://user-images.githubusercontent.com/105259381/186575095-57b34491-9654-49b3-9ad8-c9254481e4ca.png)
 
+![image](https://user-images.githubusercontent.com/105259381/186577950-841c70a6-4d2a-4bb6-87d4-5838f69bbc72.png)
+
+32. Trace el diagrama fasorial de los voltajes y las corrientes que aparecen en la figura 16-70.
+
+![image](https://user-images.githubusercontent.com/105259381/186578087-96335f36-0054-43b1-9701-208d3375e944.png)
+
+![image](https://user-images.githubusercontent.com/105259381/186578707-0d5a7318-aa98-4a22-ae21-0fbaa6987316.png)
+
+![image](https://user-images.githubusercontent.com/105259381/186579515-a8cf8d42-ef80-4308-bbb2-8a93d83583de.png)
+
+34. Determine el desplazamiento de fase y la atenuación desde la entrada hasta la salida para la red en configuración de escalera de la figura 16-72.
+
+![image](https://user-images.githubusercontent.com/105259381/186579608-57814075-b282-485f-985e-063c6ee021cc.png)
+
+![image](https://user-images.githubusercontent.com/105259381/186580534-27765ce1-6968-46ce-9d63-f048c2c8c208.png)
+
+#### PARTE 4: TEMAS ESPECIALES
+
+#### SECCIÓN 16–7 Potencia en circuitos RL
+
+36. En cierto circuito RL, la potencia verdadera es de 100 mW, y la potencia reactiva de 340 mVAR. ¿Cuál es la potencia aparente?
+
+![image](https://user-images.githubusercontent.com/105259381/186580129-dbc30868-190e-4e7b-b67b-592b5693a97b.png)
+
+38. ¿Cuál es el factor de potencia en la figura 16-64?
+
+![image](https://user-images.githubusercontent.com/105259381/186579943-dee91c4b-ea42-4087-a525-13743ade86e4.png)
+
+![image](https://user-images.githubusercontent.com/105259381/186580631-5b5c4bd6-46e0-4364-82ba-1fa42c593c9e.png)
+
+40. Determine la potencia verdadera para el circuito de la figura 16-70
+
+![image](https://user-images.githubusercontent.com/105259381/186580739-d86e7aaf-3660-4def-9d0e-95a3ca04c517.png)
+
+![image](https://user-images.githubusercontent.com/105259381/186581158-808dda41-63eb-43ef-9f2e-47398174a0d7.png)
+
+#### SECCIÓN 16–8 Aplicaciones básicas
+
+42. Con el mismo procedimiento del problema 41, trace la curva de respuesta para la figura 16-62
+
+![image](https://user-images.githubusercontent.com/105259381/186581458-7b61be5f-218f-40d4-b422-fe2a19831872.png)
+
+![image](https://user-images.githubusercontent.com/105259381/186582147-75503c24-30ed-44d7-8b14-a6b8228960b4.png)
+
+![image](https://user-images.githubusercontent.com/105259381/186582079-7ca29751-adae-4830-a173-3b923eab78e1.png)
+
+#### SECCIÓN 16–9 Localización de fallas
+
+44. Determine el voltaje a través de cada componente mostrado en la figura 16-73 si L1 está abierto
+
+![image](https://user-images.githubusercontent.com/105259381/186582333-9993cbb2-eb0d-47d5-b8ab-27c892abf155.png)
+
+![image](https://user-images.githubusercontent.com/105259381/186582458-7e21cb1c-4e78-4aac-8858-4128cc9da59d.png)
+
+## 4. CONCLUSIONES 
+
+- Mediante la introducción de los números complejos se constituye una herramienta importante para el análisis de circuitos de ca. El sistema de números complejos es una forma de exresar matemáticamente una cantidad fasorial y permite sumar, restar, multiplicar y dividir cantidades fasoriales.
+
+- En la sección de impedancia y admitancia de circuitos rc en paralelo se aprendió cómo determinar la impedancia y el ángulo de fase de un circuito RC dispuesto en paralelo. La impedancia se compone de un componente de magnitud y un componente de ángulo de fase.
+
+- Los conceptos estudiados con respecto a circuitos dispuestos en serie-paralelo se utilizan para analizar circuitos que tienen combinaciones de componentes R y C tanto en serie como en paralelo.
+
+- Las fallas o la degradación de algunos componentes típicos afectan la respuesta a la frecuencia en circuitos RC básicos.
+
+- Los análisis de circuitos RL y RC son similares. La diferencia principal es que las respuestas de fase son opuestas: la reactancia inductiva se incrementa con la frecuencia, en tanto que la reactancia capacitiva disminuye con la frecuencia. Un circuito RL contiene tanto resistencia como inductancia.
+
+## 5. VIDEO
 
 
 
+## 6. BIBLIOGRAFIA
 
+Floyd, TL (2007). Principios de circuitos electricos. Monterrey: Pearson Educación.
+
+Bismarks, J. L. (2021, May 21). El resistor (R), el inductor (L) y el condensador (C). Electrónica Online. https://electronicaonline.net/electronica/circuito-rl-funcionamiento-usos/
 
 
